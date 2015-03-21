@@ -47,3 +47,10 @@ addCommamap :: [String] -> [String]
 addCommamap [] = []
 addCommamap x = map (++ ",") x
 
+--Crie uma função htmlListItems :: [String] -> [String], que receba uma lista de strings e retorne outra lista contendo as strings formatadas como itens de lista em HTML. Dica: use map e defina uma função auxiliar a ser aplicada a cada elemento. Exemplo de uso da função:
+htmlListItems :: [String] -> [String]
+htmlListItems [] = []
+htmlListItems x = (map ("<LI>" ++) x (++ "</LI>"))
+
+
+
