@@ -38,7 +38,8 @@ allcifrao p xs = and $ map p xs
 --3
 --
 --Composição de Função é utilizado com o (.), junta duas funções.
---
+--Referencia: http://www.cse.chalmers.se/edu/year/2014/course/TDA452/Haskell-Prelude-Tour-A4.pdf
+
 desort = (reverse . sort)
 
 (.) :: (b -> c) -> (a -> b) -> a -> c
