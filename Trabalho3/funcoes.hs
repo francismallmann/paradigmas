@@ -27,16 +27,16 @@ userName nome = toLower (head nome) : map toLower (lastName nome)
 encodeName :: String -> String
 encodeName nome = concat (map (tradeWords) nome)
 	where tradeWords nome
-		| name == 'a' = "4" 
-		| name == 'A' = "4"
-		| name == 'e' = "3" 
-		| name == 'E' = "3" 
-		| name == 'i' = "1"
-		| name == 'I' = "1" 
-		| name == 'o' = "0"
-		| name == 'O' = "0" 
-		| name == 'u' = "00"
-		| name == 'U' = "00"
+		| nome == 'a' = "4" 
+		| nome == 'A' = "4"
+		| nome == 'e' = "3" 
+		| nome == 'E' = "3" 
+		| nome == 'i' = "1"
+		| nome == 'I' = "1" 
+		| nome == 'o' = "0"
+		| nome == 'O' = "0" 
+		| nome == 'u' = "00"
+		| nome == 'U' = "00"
 		| otherwise = [nome]
 
 
