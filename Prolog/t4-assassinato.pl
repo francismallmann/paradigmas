@@ -108,3 +108,20 @@ fato(maria, santa_maria, quarta).
 fato(maria, santa_maria, quinta).
 fato(maria, apartamento, sexta).
 
+
+apart(X) :- fato(X, apartamento, sexta), fato(X, apartamento, quinta).
+
+
+%roubos
+roubo_da_chave(X) :- fato(X, santa_maria, quarta), fato(X, porto_alegre, terca).
+roubo_bastao(X) :- fato(X, porto_alegre, quinta), fato(X, santa_maria, quarta).
+roubo_martelo(X) :- fato(X, apartamento, quarta), fato(X, apartamento, quinta).
+roubo_da_arma(X) :- roubo_bastao(X), roubo_martelo(X).
+
+%quem tem ciumes?
+tem_ciumes(A, B) :- relacionamento(A, X), relacionamento(B, X).
+
+%invasao do quarto
+acesso(X) :- apart(X), roubo_da_chave(X), roubo_da_arma(X).
+motivo(X) :- tem_ciumes(X, anita); pobre(X); insano(X). 
+assassino(X) :- motivo(X), acesso(X).
