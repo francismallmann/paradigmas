@@ -25,8 +25,8 @@ dia(sexta).
 %Condição financeira
 pobre(bia).
 pobre(pedro).
+pobre(bernardo).
 rico(alice).
-rico(pedro).
 pobre(maria).
 rico(adriano).
 rico(caren).
